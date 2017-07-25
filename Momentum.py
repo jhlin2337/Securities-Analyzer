@@ -1,6 +1,5 @@
 from Stock import Stock
 import operator
-import time
 
 class Momentum:
 
@@ -22,13 +21,3 @@ class Momentum:
 		top_decile_index = len(sorted_stocks)//10
 
 		return sorted_stocks[:top_decile_index]
-
-
-t0 = time.time()
-momentum = Momentum()
-print(momentum.get_momentum_stocks())
-t1 = time.time()
-print(t1-t0)
-
-# stock = Stock('AAPL')
-# print(stock.get_percent_return(39, True))
