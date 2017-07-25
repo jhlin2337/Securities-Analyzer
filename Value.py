@@ -5,7 +5,7 @@ class Value:
 	THRESHOLD = 6
 
 	def __init__(self):
-		self.value_stocks = open('./Index_Page/Value_Stocks.txt', 'r')
+		self.value_stocks = open('./Data/Stocks_List/Value_Stocks.txt', 'r')
 		
 	def get_value_stocks(self):
 		for line in self.value_stocks:
@@ -15,7 +15,7 @@ class Value:
 				print('--------------------------------------------------------------')
 				print(ticker + ': ' + str(len(requirements_satisfied)))
 				print(requirements_satisfied)
-				self.print_data(ticker)
+				#self.print_data(ticker)
 
 	def get_number_requirements_satisfied(self, ticker):
 		stock = Stock(ticker)

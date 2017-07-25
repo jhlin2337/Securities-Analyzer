@@ -13,19 +13,33 @@ class Stock:
 	def __init__(self, ticker_symbol):
 		self.ticker_symbol = ticker_symbol.lower()
 
-		# Get the url link for the xml report of the company
+		# Get the url link for the xml report of the company in the current year
 		xml_report_link = ''
 		search_term = '/' + self.ticker_symbol + '-'
-		annual_reports = open('./Index_Page/Annual_Reports_Ticker_XML.txt', 'r')
+		annual_reports = open('./Data/Annual_Reports/Annual_Reports_17_Ticker_XML.txt', 'r')
 		for line in annual_reports:
 			if search_term in line:
 				fields = line.strip().split('     ')
 				xml_report_link = fields[len(fields)-1]
 
-		# Request the company's annual report xml file
+		# Request the company's annual report xml file in the current year
 		url = 'https://www.sec.gov/' + xml_report_link
 		r = requests.get(url)
-		self.report = r.text
+		self.current_report = r.text
+
+		# Get the url link for the xml report of the company from two years ago
+		xml_report_link = ''
+		search_term = '/' + self.ticker_symbol + '-'
+		annual_reports = open('./Data/Annual_Reports/Annual_Reports_15_Ticker_XML.txt', 'r')
+		for line in annual_reports:
+			if search_term in line:
+				fields = line.strip().split('     ')
+				xml_report_link = fields[len(fields)-1]
+
+		# Request the company's annual report xml file from two years ago
+		url = 'https://www.sec.gov/' + xml_report_link
+		r2 = requests.get(url)
+		self.previous_report = r2.text
 
 	# Returns the net income of the firm <n> years ago. 
 	def get_net_income(self, n):
@@ -130,13 +144,17 @@ class Stock:
 	def get_number_inside_regexp(self, regexp, n):
 		if n < 0:
 			n = 0
+		if n > 3:
+			n = 3
+
+		annual_report = self.current_report
 		if n > 1:
-			n = 1
+			annual_report = self.previous_report
 
 		try:
 			# Finds number data inside regexp assuming first result is latest year
-			query_data = re.findall(regexp, self.report)
-			accounting_number = (re.findall(r'>-?\d+<', query_data[n]))[0]
+			query_data = re.findall(regexp, annual_report)
+			accounting_number = (re.findall(r'>-?\d+<', query_data[n%2]))[0]
 			accounting_number = accounting_number[1:len(accounting_number)-1]
 
 			try:
@@ -146,8 +164,9 @@ class Stock:
 				for line in query_data:
 					date_filed = (re.findall(r'contextRef=".*?"', line))[0]
 					is_annual = ('YTD' in date_filed or '12-31' in date_filed or 'Q4' in date_filed or 
-								'12_31_20' in date_filed or '31_Dec_20' in date_filed)
-					is_not_quarter = '10_1' not in date_filed
+								'12_31_20' in date_filed or '31_Dec_20' in date_filed or '1231' in date_filed)
+					is_not_quarter = ('10_1' not in date_filed and '1001' not in date_filed and 
+						 			  'QTD' not in date_filed)
 					is_not_specific = ('us-gaap' not in date_filed and 'usgaap' not in date_filed and 
 									   'Member' not in date_filed)
 					if query_year in date_filed and is_annual and is_not_quarter and is_not_specific:
@@ -205,25 +224,25 @@ class Stock:
 			return float("-inf")
 
 
-# start_time = time.time()
+start_time = time.time()
 
-# # stocks = ['kgji', 'amc', 'fosl', 'gco', 'onp', 'css']
-# stocks = ['tsla', 'adbe', 'amzn', 'ma', 'fb']
+# stocks = ['kgji', 'amc', 'fosl', 'gco', 'onp', 'css']
+stocks = ['tsla', 'adbe', 'amzn', 'ma', 'fb']
 
-# N = 1
-# for ticker in stocks:
-# 	print('----------------------------------------------------------------------------')
-# 	stock = Stock(ticker)
-# 	print('Company Name: ' + ticker)
-# 	print('Total Assets: ' + stock.get_total_assets(N))
-# 	print('Current Assets: ' + stock.get_current_assets(N))
-# 	print('Total Liabilities: ' + stock.get_total_liabilities(N))
-# 	print('Current Liabilities: ' + stock.get_current_liabilities(N))
-# 	print('Long Term Liabilities: ' + stock.get_long_term_liabilities(N))
-# 	print('Net Income: ' + stock.get_net_income(N))
-# 	print('Revenue: ' + stock.get_revenue(N))
-# 	print('Cost of Goods Sold: ' + stock.get_cost_of_goods_sold(N))
-# 	print('Operations Cash Flow: ' + stock.get_operations_cash_flow(N))
+N = 2
+for ticker in stocks:
+	print('----------------------------------------------------------------------------')
+	stock = Stock(ticker)
+	print('Company Name: ' + ticker)
+	print('Total Assets: ' + stock.get_total_assets(N))
+	print('Current Assets: ' + stock.get_current_assets(N))
+	print('Total Liabilities: ' + stock.get_total_liabilities(N))
+	print('Current Liabilities: ' + stock.get_current_liabilities(N))
+	print('Long Term Liabilities: ' + stock.get_long_term_liabilities(N))
+	print('Net Income: ' + stock.get_net_income(N))
+	print('Revenue: ' + stock.get_revenue(N))
+	print('Cost of Goods Sold: ' + stock.get_cost_of_goods_sold(N))
+	print('Operations Cash Flow: ' + stock.get_operations_cash_flow(N))
 
-# end_time = time.time()
-# print(end_time-start_time)
+end_time = time.time()
+print(end_time-start_time)

@@ -1,0 +1,305 @@
+----------------------------------------------------------------------------
+Company Name: tsla
+Total Assets: 22664076000
+Current Assets: 6259796000
+Total Liabilities: 16750167000
+Current Liabilities: 5827005000
+Long Term Liabilities: 466741000
+Net Income: -773046000
+Revenue: 7000132000
+Cost of Goods Sold: 5400875000
+Operations Cash Flow: -123829000
+----------------------------------------------------------------------------
+Company Name: adbe
+Total Assets: 12707114000
+Current Assets: 5839774000
+Total Liabilities: 5282279000
+Current Liabilities: 2811635000
+Long Term Liabilities: 2470644000
+Net Income: 1168782000
+Revenue: 5854430000
+Cost of Goods Sold: 819908000
+Operations Cash Flow: 2199728000
+----------------------------------------------------------------------------
+Company Name: amzn
+Total Assets: 83402000000
+Current Assets: 45781000000
+Total Liabilities: error
+Current Liabilities: 43816000000
+Long Term Liabilities: 7694000000
+Net Income: 2371000000
+Revenue: 135987000000
+Cost of Goods Sold: 88265000000
+Operations Cash Flow: 16443000000
+----------------------------------------------------------------------------
+Company Name: ma
+Total Assets: 18675000000
+Current Assets: 13228000000
+Total Liabilities: 12991000000
+Current Liabilities: 7206000000
+Long Term Liabilities: 5180000000
+Net Income: 4059000000
+Revenue: 10776000000
+Cost of Goods Sold: 0
+Operations Cash Flow: 4484000000
+----------------------------------------------------------------------------
+Company Name: fb
+Total Assets: 64961000000
+Current Assets: 34401000000
+Total Liabilities: 5767000000
+Current Liabilities: 2875000000
+Long Term Liabilities: 2892000000
+Net Income: 10217000000
+Revenue: 27638000000
+Cost of Goods Sold: 3789000000
+Operations Cash Flow: 16108000000
+3.174772024154663
+Jamess-Air:SecuritiesAnalyzer James$ python3 Stock.py
+----------------------------------------------------------------------------
+Company Name: tsla
+Total Assets: 8067939000
+Current Assets: 2782006000
+Total Liabilities: 6936950000
+Current Liabilities: 2811035000
+Long Term Liabilities: 4125915000
+Net Income: -888663000
+Revenue: 4046025000
+Cost of Goods Sold: 3122522000
+Operations Cash Flow: -524499000
+----------------------------------------------------------------------------
+Company Name: adbe
+Total Assets: 11726472000
+Current Assets: 4821892000
+Total Liabilities: 4724892000
+Current Liabilities: 2213556000
+Long Term Liabilities: 2511336000
+Net Income: 629551000
+Revenue: 4795511000
+Cost of Goods Sold: 744317000
+Operations Cash Flow: 1469502000
+----------------------------------------------------------------------------
+Company Name: amzn
+Total Assets: 64747000000
+Current Assets: 35705000000
+Total Liabilities: error
+Current Liabilities: 33887000000
+Long Term Liabilities: 8227000000
+Net Income: 596000000
+Revenue: 107006000000
+Cost of Goods Sold: 71651000000
+Operations Cash Flow: 11920000000
+----------------------------------------------------------------------------
+Company Name: ma
+Total Assets: 16250000000
+Current Assets: 10984000000
+Total Liabilities: 10188000000
+Current Liabilities: 6269000000
+Long Term Liabilities: 3268000000
+Net Income: 3808000000
+Revenue: 9667000000
+Cost of Goods Sold: 0
+Operations Cash Flow: 4043000000
+----------------------------------------------------------------------------
+Company Name: fb
+Total Assets: 49407000000
+Current Assets: 21652000000
+Total Liabilities: 5189000000
+Current Liabilities: 1925000000
+Long Term Liabilities: 3264000000
+Net Income: 3688000000
+Revenue: 17928000000
+Cost of Goods Sold: 2867000000
+Operations Cash Flow: 10320000000
+3.9450738430023193
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------
+Company Name: tsla
+Total Assets: 5849251000
+Current Assets: 3198657000
+Total Liabilities: 4879345000
+Current Liabilities: 2107166000
+Long Term Liabilities: 2772179000
+Net Income: -294040000
+Revenue: 3198356000
+Cost of Goods Sold: 2316685000
+Operations Cash Flow: -57337000
+----------------------------------------------------------------------------
+Company Name: adbe
+Total Assets: 10785829000
+Current Assets: 4602328000
+Total Liabilities: 4009924000
+Current Liabilities: 2494435000
+Long Term Liabilities: 1515489000
+Net Income: 268395000
+Revenue: 4147065000
+Cost of Goods Sold: 622080000
+Operations Cash Flow: 1287482000
+----------------------------------------------------------------------------
+Company Name: amzn
+Total Assets: 54505000000
+Current Assets: 31327000000
+Total Liabilities: error
+Current Liabilities: 28089000000
+Long Term Liabilities: 8265000000
+Net Income: -241000000
+Revenue: 88988000000
+Cost of Goods Sold: 62752000000
+Operations Cash Flow: 6842000000
+----------------------------------------------------------------------------
+Company Name: ma
+Total Assets: 15329000000
+Current Assets: 10997000000
+Total Liabilities: 8505000000
+Current Liabilities: 6222000000
+Long Term Liabilities: 1494000000
+Net Income: 3617000000
+Revenue: 9473000000
+Cost of Goods Sold: 0
+Operations Cash Flow: 3407000000
+----------------------------------------------------------------------------
+Company Name: fb
+Total Assets: 40184000000
+Current Assets: 13670000000
+Total Liabilities: 4088000000
+Current Liabilities: 1424000000
+Long Term Liabilities: 2664000000
+Net Income: 2940000000
+Revenue: 12466000000
+Cost of Goods Sold: 2153000000
+Operations Cash Flow: 5457000000
+----------------------------------------------------------------------------
+
+
+Company Name: tsla
+Total Assets: 2416930000
+Current Assets: 1265939000
+Total Liabilities: 1749810000
+Current Liabilities: 675160000
+Long Term Liabilities: 1074650000
+----------------------------------------------------------------------------
+Company Name: adbe
+Total Assets: 10380298000
+Current Assets: 4045929000
+Total Liabilities: 3655664000
+Current Liabilities: 1525648000
+Long Term Liabilities: 2130016000
+Net Income: 289985000
+Revenue: 4055240000
+Cost of Goods Sold: 586557000
+Operations Cash Flow: 1151686000
+----------------------------------------------------------------------------
+Company Name: amzn
+Total Assets: 40159000000
+Current Assets: 24625000000
+Total Liabilities: error
+Current Liabilities: 22980000000
+Long Term Liabilities: 3191000000
+Net Income: 274000000
+Revenue: 74452000000
+Cost of Goods Sold: 54181000000
+Operations Cash Flow: 5475000000
+----------------------------------------------------------------------------
+Company Name: ma
+Total Assets: 14242000000
+Current Assets: 10950000000
+Total Liabilities: 6747000000
+Current Liabilities: 6032000000
+Long Term Liabilities: 0
+Net Income: 3116000000
+Revenue: 8346000000
+Cost of Goods Sold: 0
+Operations Cash Flow: 4135000000
+----------------------------------------------------------------------------
+Company Name: fb
+Total Assets: 17895000000
+Current Assets: 13070000000
+Total Liabilities: 2425000000
+Current Liabilities: 1100000000
+Long Term Liabilities: 1325000000
+Net Income: 1500000000
+Revenue: 7872000000
+Cost of Goods Sold: 1875000000
+Operations Cash Flow: 4222000000
+3.817107915878296
+
+
+
+
+
+
+
+Company Name: kgji
+Total Assets: 2262403149
+Current Assets: 752985062
+Total Liabilities: 1979912862
+Current Liabilities: 293116111
+Long Term Liabilities: 1224770721
+Net Income: 92903317
+Revenue: 1420624970
+Cost of Goods Sold: 1274250385
+Operations Cash Flow: -74007221
+----------------------------------------------------------------------------
+Company Name: amc
+Total Assets: 8641841000
+Current Assets: 683643000
+Total Liabilities: 6631107000
+Current Liabilities: 1189190000
+Long Term Liabilities: 3745755000
+Net Income: 111667000
+Revenue: 3235846000
+Cost of Goods Sold: 142167000
+Operations Cash Flow: 431655000
+----------------------------------------------------------------------------
+Company Name: fosl
+Total Assets: 2186897000
+Current Assets: 1347290000
+Total Liabilities: error
+Current Liabilities: 414585000
+Long Term Liabilities: 605900000
+Net Income: 85603000
+Revenue: 3042371000
+Cost of Goods Sold: 1464185000
+Operations Cash Flow: 210127000
+----------------------------------------------------------------------------
+Company Name: gco
+Total Assets: 1541190000
+Current Assets: 800086000
+Total Liabilities: 584407000
+Current Liabilities: 323617000
+Long Term Liabilities: 97583000
+Net Income: 94569000
+Revenue: 3022234000
+Cost of Goods Sold: 1578768000
+Operations Cash Flow: 145118000
+----------------------------------------------------------------------------
+Company Name: onp
+Total Assets: 208377618
+Current Assets: 14477322
+Total Liabilities: 35622232
+Current Liabilities: 20585591
+Long Term Liabilities: 15036641
+Net Income: 7312976
+Revenue: 134744600
+Cost of Goods Sold: 109212717
+Operations Cash Flow: 15277522
+----------------------------------------------------------------------------
+Company Name: css
+Total Assets: 309926000
+Current Assets: 210691000
+Total Liabilities: error
+Current Liabilities: 33805000
+Long Term Liabilities: 262000
+Net Income: 17236000
+Revenue: 317017000
+Cost of Goods Sold: 214746000
+Operations Cash Flow: 15123000
+2.9592912197113037
