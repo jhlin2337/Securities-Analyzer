@@ -116,7 +116,7 @@ class Stock:
 
 		return revenue
 
-	# Return the cost of goods sold by the firm in the most recent year
+	# Return the cost of goods sold by the firm <n> years ago
 	def get_cost_of_goods_sold(self, n):
 		regexps = [r'<us-gaap:CostOfRevenue.*</us-gaap:CostOfRevenue>',
 				   r'<us-gaap:CostOfGoodsAndServicesSold.*</us-gaap:CostOfGoodsAndServicesSold>',
@@ -129,6 +129,37 @@ class Stock:
 			cogs = '0'
 
 		return cogs
+
+	# Return the amount the company spent on research and development <n> years ago
+	def get_research_development_expense(self, n):
+		regexps = [r'<us-gaap:ResearchAndDevelopment.*</us-gaap:ResearchAndDevelopment']
+		rd_expense = self.attempt_data_retrieval(regexps, n)
+
+		if rd_expense == 'error':
+			rd_expense = '0'
+
+		return rd_expense
+
+	# Return capital expenditure of the company <n> years ago
+	def get_capital_expenditure(self, n):
+		regexps = [r'<us-gaap:PaymentsToAcquirePropertyPlantAndEquipment.*</us-gaap:PaymentsToAcquirePropertyPlantAndEquipment>']
+		capital_expenditure = self.attempt_data_retrieval(regexps, n)
+
+		if capital_expenditure == 'error':
+			capital_expenditure = '0'
+
+		return capital_expenditure
+
+	# Return the amount the company spent on advertising <n> years ago
+	def get_advertising_expense(self, n):
+		regexps = [r'<us-gaap:.*?Marketing.*?Expense.*</us-gaap:.*?Marketing.*?Expense>',
+				   r'<us-gaap:.*?Advertising.*?Expense.*</us-gaap:.*?Advertising.*?Expense>']
+		advertising_expense = self.attempt_data_retrieval(regexps, n)
+
+		if advertising_expense == 'error':
+			advertising_expense = '0'
+
+		return advertising_expense
 
 	# Takes an array of regular expressions <regexp> and attempts to find a regular
 	# expression that fits with the xml data from the SEC annual report of the company
@@ -229,20 +260,23 @@ start_time = time.time()
 # stocks = ['kgji', 'amc', 'fosl', 'gco', 'onp', 'css']
 stocks = ['tsla', 'adbe', 'amzn', 'ma', 'fb']
 
-N = 2
+N = 0
 for ticker in stocks:
 	print('----------------------------------------------------------------------------')
 	stock = Stock(ticker)
-	print('Company Name: ' + ticker)
-	print('Total Assets: ' + stock.get_total_assets(N))
-	print('Current Assets: ' + stock.get_current_assets(N))
-	print('Total Liabilities: ' + stock.get_total_liabilities(N))
-	print('Current Liabilities: ' + stock.get_current_liabilities(N))
-	print('Long Term Liabilities: ' + stock.get_long_term_liabilities(N))
-	print('Net Income: ' + stock.get_net_income(N))
-	print('Revenue: ' + stock.get_revenue(N))
-	print('Cost of Goods Sold: ' + stock.get_cost_of_goods_sold(N))
-	print('Operations Cash Flow: ' + stock.get_operations_cash_flow(N))
+	print('Company Name:             ' + ticker)
+	print('Total Assets:             ' + stock.get_total_assets(N))
+	print('Current Assets:           ' + stock.get_current_assets(N))
+	print('Total Liabilities:        ' + stock.get_total_liabilities(N))
+	print('Current Liabilities:      ' + stock.get_current_liabilities(N))
+	print('Long Term Liabilities:    ' + stock.get_long_term_liabilities(N))
+	print('Net Income:               ' + stock.get_net_income(N))
+	print('Revenue:                  ' + stock.get_revenue(N))
+	print('Cost of Goods Sold:       ' + stock.get_cost_of_goods_sold(N))
+	print('Operations Cash Flow:     ' + stock.get_operations_cash_flow(N))
+	print('Research and Development: ' + stock.get_research_development_expense(N))
+	print('Capital Expenditure:      ' + stock.get_capital_expenditure(N))
+	print('Advertising Expense:      ' + stock.get_advertising_expense(N))
 
 end_time = time.time()
 print(end_time-start_time)
