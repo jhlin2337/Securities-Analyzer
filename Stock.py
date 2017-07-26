@@ -255,28 +255,29 @@ class Stock:
 			return float("-inf")
 
 
-start_time = time.time()
+# start_time = time.time()
 
-# stocks = ['kgji', 'amc', 'fosl', 'gco', 'onp', 'css']
-stocks = ['tsla', 'adbe', 'amzn', 'ma', 'fb']
+# #stocks = ['kgji', 'amc', 'fosl', 'gco', 'onp', 'css']
+# # stocks = ['tsla', 'adbe', 'amzn', 'ma', 'fb']
+# stocks = ['twou', 'ddd', 'tpnl']
 
-N = 0
-for ticker in stocks:
-	print('----------------------------------------------------------------------------')
-	stock = Stock(ticker)
-	print('Company Name:             ' + ticker)
-	print('Total Assets:             ' + stock.get_total_assets(N))
-	print('Current Assets:           ' + stock.get_current_assets(N))
-	print('Total Liabilities:        ' + stock.get_total_liabilities(N))
-	print('Current Liabilities:      ' + stock.get_current_liabilities(N))
-	print('Long Term Liabilities:    ' + stock.get_long_term_liabilities(N))
-	print('Net Income:               ' + stock.get_net_income(N))
-	print('Revenue:                  ' + stock.get_revenue(N))
-	print('Cost of Goods Sold:       ' + stock.get_cost_of_goods_sold(N))
-	print('Operations Cash Flow:     ' + stock.get_operations_cash_flow(N))
-	print('Research and Development: ' + stock.get_research_development_expense(N))
-	print('Capital Expenditure:      ' + stock.get_capital_expenditure(N))
-	print('Advertising Expense:      ' + stock.get_advertising_expense(N))
+# N = 1
+# for ticker in stocks:
+# 	print('----------------------------------------------------------------------------')
+# 	stock = Stock(ticker)
+# 	print('Company Name:             ' + ticker)
+# 	print('Total Assets:             ' + stock.get_total_assets(N))
+# 	print('Current Assets:           ' + stock.get_current_assets(N))
+# 	print('Total Liabilities:        ' + stock.get_total_liabilities(N))
+# 	print('Current Liabilities:      ' + stock.get_current_liabilities(N))
+# 	print('Long Term Liabilities:    ' + stock.get_long_term_liabilities(N))
+# 	print('Net Income:               ' + stock.get_net_income(N))
+# 	print('Revenue:                  ' + stock.get_revenue(N))
+# 	print('Cost of Goods Sold:       ' + stock.get_cost_of_goods_sold(N))
+# 	print('Operations Cash Flow:     ' + stock.get_operations_cash_flow(N))
+# 	print('Research and Development: ' + stock.get_research_development_expense(N))
+# 	print('Capital Expenditure:      ' + stock.get_capital_expenditure(N))
+# 	print('Advertising Expense:      ' + stock.get_advertising_expense(N))
 
-end_time = time.time()
-print(end_time-start_time)
+# end_time = time.time()
+# print(end_time-start_time)
