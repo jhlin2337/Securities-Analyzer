@@ -161,6 +161,17 @@ class Stock:
 
 		return advertising_expense
 
+	def get_sic_code(self):
+		search_term = '/' + self.ticker_symbol + '-'
+		sic_reports = open('./Data/Annual_Reports/Annual_Reports_17_Ticker_XML_SIC.txt', 'r')
+		for line in sic_reports:
+			if search_term in line:
+				fields = line.strip().split('     ')
+				sic_code = fields[0]
+				return sic_code[:2]
+
+		return 'error'
+
 	# Takes an array of regular expressions <regexp> and attempts to find a regular
 	# expression that fits with the xml data from the SEC annual report of the company
 	def attempt_data_retrieval(self, regexps, n):

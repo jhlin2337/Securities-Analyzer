@@ -2,11 +2,13 @@ from Stock import Stock
 
 class Value:
 	
-	THRESHOLD = 6
+	THRESHOLD = 6	# Number of requirements that need to be met in order to not be filtered out
 
+	# Initializes the list of high BM stocks that the code will run through
 	def __init__(self):
 		self.value_stocks = open('./Data/Stocks_List/Value_Stocks.txt', 'r')
 		
+	# Returns a list of value stocks that have an F_Score greater than THRESHOLD
 	def get_value_stocks(self):
 		for line in self.value_stocks:
 			ticker = line[:len(line)-1]
@@ -17,6 +19,8 @@ class Value:
 				print(requirements_satisfied)
 				#self.print_data(ticker)
 
+	# Appends each F_Score requirement that <ticker> meets onto an array and returns
+	# the array
 	def get_number_requirements_satisfied(self, ticker):
 		stock = Stock(ticker)
 		requirements_satisfied = []
