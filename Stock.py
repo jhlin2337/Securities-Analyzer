@@ -269,8 +269,8 @@ class Stock:
 # start_time = time.time()
 
 # #stocks = ['kgji', 'amc', 'fosl', 'gco', 'onp', 'css']
-# # stocks = ['tsla', 'adbe', 'amzn', 'ma', 'fb']
-# stocks = ['twou', 'ddd', 'tpnl']
+# stocks = ['tsla', 'adbe', 'amzn', 'ma', 'fb']
+# # stocks = ['twou', 'ddd', 'tpnl']
 
 # N = 1
 # for ticker in stocks:

@@ -19,6 +19,7 @@ class Growth:
 		fp = open('./Data/Industry_Medians.json', 'r')
 		self.industry_medians = json.load(fp)
 		self.growth_stocks = open('./Data/Stocks_List/Growth_Stocks.txt', 'r')
+		# self.growth_stocks = open('./Data/Stocks_List/Nasdaq_Stocks.txt', 'r')
 
 	# Returns a list of growth stocks that have an F_Score greater than THRESHOLD
 	def get_growth_stocks(self):
